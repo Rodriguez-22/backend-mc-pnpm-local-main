@@ -1,4 +1,3 @@
-# Values.yaml corregido (sin la clave 'jenkins:' envolviéndolo todo)
 controller:
   componentName: "jenkins-controller"
   image:
@@ -8,7 +7,8 @@ controller:
   runAsUser: 1000
   fsGroup: 1000
   
-admin:
+  # 👇 NUEVA ESTRUCTURA DEL ADMINISTRADOR 👇
+  admin:
     username: "admin"
     password: "admin"
 
@@ -16,7 +16,6 @@ admin:
   ingress:
     enabled: true
     ingressClassName: "nginx"
-    # Asegúrate de poner tu nueva IP aquí
     hostName: "jenkins.194.163.158.235.nip.io"
     annotations:
       kubernetes.io/ingress.class: nginx
