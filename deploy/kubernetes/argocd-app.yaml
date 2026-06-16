@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: 'https://github.com/rodriguez-22/backend-mc-pnpm.git'
-    targetRevision: master
+    repoURL: 'https://github.com/Rodriguez-22/backend-mc-pnpm-local-main.git'
+    targetRevision: main
     path: deploy/kubernetes/tito-pizzeria
     helm:
       valueFiles:
