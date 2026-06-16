@@ -8,8 +8,9 @@ controller:
   runAsUser: 1000
   fsGroup: 1000
   
-  adminUser: "admin"
-  adminPassword: "admin"
+admin:
+    username: "admin"
+    password: "admin"
 
   serviceType: "ClusterIP"
   ingress:
