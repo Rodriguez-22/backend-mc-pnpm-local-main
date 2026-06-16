@@ -43,7 +43,9 @@ serviceAccount:
   create: true
   name: "jenkins"
 
-  agent:
+# Configuración del agente separada correctamente a nivel raíz
+agent:
+  enabled: true
   resources:
     requests:
       cpu: "512m"
