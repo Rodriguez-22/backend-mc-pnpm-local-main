@@ -1,13 +1,13 @@
+# deploy/kubernetes/tito-pizzeria/charts/ms-gateway/values.yaml
 app:
   image:
     repository: "jose196/tito-gateway"
-    tag: "v1.2"  # (o "latest" si la subiste así)
+    tag: "v1.2" 
     pullPolicy: "Always"
   containerPort: 3000
   env:
     NATS_SERVERS: "nats://nats:4222"
     PORT: "3000"
-    # 👇 ESTA ES LA LÍNEA QUE SALVARÁ AL GATEWAY 👇
     REPO_GIT: "https://github.com/Rodriguez-22/backend-mc-pnpm.git"
 
 service:
@@ -18,6 +18,7 @@ service:
 ingress:
   enabled: true
   className: nginx
-  host: api.jrodrodriguez.es
+  # NUEVO HOST: Usando la nueva IP del VPS
+  host: "api.194.163.158.235.nip.io"
   path: /
   pathType: ImplementationSpecific
