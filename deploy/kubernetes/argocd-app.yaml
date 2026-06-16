@@ -6,6 +6,7 @@ metadata:
 spec:
   project: default
   source:
+    # 👇 ESTA ES LA LÍNEA QUE DEBEMOS CORREGIR 👇
     repoURL: 'https://github.com/Rodriguez-22/backend-mc-pnpm-local-main.git'
     targetRevision: main
     path: deploy/kubernetes/tito-pizzeria
