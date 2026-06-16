@@ -27,6 +27,10 @@ pipeline {
         stage('Instalación pnpm') {
             steps {
                 echo 'Instalando dependencias del monorepo...'
+                // Añade esta línea para instalar pnpm
+                sh 'npm install -g pnpm'
+                
+                // Ahora ya funcionará
                 sh 'pnpm install'
             }
         }
